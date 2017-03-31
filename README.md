@@ -135,7 +135,7 @@ All required fields for whoisd must be defined in the mapping file. The mapping 
         "key": "Registrar WHOIS Server: ",
         "value": ["whois.yourwhois.eu"]
       }
-
+    }
   },
   {
     "TLDs": ["com", "net"],
@@ -154,7 +154,7 @@ All required fields for whoisd must be defined in the mapping file. The mapping 
         "key": "Registrar WHOIS Server: ",
         "value": ["whois.yourwhois.eu"]
       }
-
+    }
   }
 ]
 ```
@@ -175,14 +175,15 @@ All required fields for whoisd must be defined in the mapping file. The mapping 
         "name": ["creationDate"],
         "format": "{date}",
         "related": "name"
-      }
-      "06": {
+      },
+   
+      "07": {
         "key": "Expiration Date: ",
         "name": ["expirationDate"],
         "format": "{shortdate}",
         "related": "name"
       }
-
+    }
   }
 ]
 ```
@@ -235,7 +236,7 @@ Name Server: ns3.example.com
         "related": "ownerHandle",
         "relatedBy": "handle",
         "relatedTo": "customer"
-      },
+      }
 
   }
 ]
@@ -281,6 +282,7 @@ Name Server: ns3.example.com
         "multiple": true,
         "related": "name"
       },
+
       "21": {
         "key": "Registrant Phone: ",
         "name": ["phone.countryCode", "phone.areaCode", "phone.subscriberNumber"],
@@ -311,13 +313,14 @@ Name Server: ns3.example.com
         "relatedTo": "customer",
         "replacedBy": "15"
       },
+
       "15": {
         "key": "Registrant Organization: ",
         "name": ["companyName"],
         "related": "ownerHandle",
         "relatedBy": "handle",
         "relatedTo": "customer"
-      },
+      }
 
   }
 ]
@@ -328,7 +331,6 @@ Name Server: ns3.example.com
 ```json
 [
   {
-
       "55": {
         "key": "",
         "value": [""],
