@@ -1,0 +1,471 @@
+[
+  {
+    "TLDs": ["com"],
+    "Fields" : {
+      "01": {
+        "key": "Domain Name: ",
+        "name": ["name"],
+	"format": "{idn}",
+        "related": "name"
+      },
+      "02": {
+        "key": "Registry Domain ID: ",
+        "name": ["domainId"],
+        "related": "name"
+      },
+      "03": {
+        "key": "Registrar WHOIS Server: ",
+        "name": ["whoisServer"],
+        "related": "staticInfoId",
+        "relatedBy": "id",
+        "relatedTo": "staticInfo"
+      },
+      "04": {
+        "key": "Registrar URL: ",
+        "name": ["registrarUrl"],
+        "related": "staticInfoId",
+        "relatedBy": "id",
+        "relatedTo": "staticInfo"
+      },
+      "05": {
+        "key": "Updated Date: ",
+        "name": ["updatedDate"],
+        "format": "{date}",
+        "related": "name"
+      },
+      "06": {
+        "key": "Creation Date: ",
+        "name": ["creationDate"],
+        "format": "{date}",
+        "related": "name"
+      },
+      "07": {
+        "key": "Registrar Registration Expiration Date: ",
+        "name": ["expirationDate"],
+        "format": "{date}",
+        "related": "name"
+      },
+      "08": {
+        "key": "Registrar: ",
+        "name": ["companyName"],
+        "related": "staticInfoId",
+        "relatedBy": "id",
+        "relatedTo": "staticInfo"
+      },
+      "09": {
+        "key": "Registrar IANA ID: ",
+        "name": ["ianaId"],
+        "related": "staticInfoId",
+        "relatedBy": "id",
+        "relatedTo": "staticInfo"
+      },
+      "10": {
+        "key": "Registrar Abuse Contact Email: ",
+        "name": ["abuseEmail"],
+        "related": "staticInfoId",
+        "relatedBy": "id",
+        "relatedTo": "staticInfo"
+      },
+      "11": {
+        "key": "Registrar Abuse Contact Phone: ",
+        "name": ["abusePhone"],
+        "related": "staticInfoId",
+        "relatedBy": "id",
+        "relatedTo": "staticInfo"
+      },
+      "12": {
+        "key": "Reseller: ",
+        "name": ["name"],
+        "hide": true,
+        "related": "resellerId",
+        "relatedBy": "resellerId",
+        "relatedTo": "reseller"
+      },
+      "13": {
+        "key": "Domain Status: ",
+        "name": ["status"],
+        "multiple": true,
+        "related": "name",
+        "relatedBy": "name",
+        "relatedTo": "domainStatus"
+      },
+      "14": {
+        "key": "Registry Registrant ID: ",
+        "name": ["ownerHandle"],
+        "related": "name"
+      },
+      "15": {
+        "key": "Registrant Name: ",
+        "name": ["firstName", "lastName"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "16": {
+        "key": "Registrant Organization: ",
+        "name": ["companyName"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "17": {
+        "key": "Registrant Street: ",
+        "name": ["addressStreet"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "18": {
+        "key": "Registrant City: ",
+        "name": ["addressCity"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "19": {
+        "key": "Registrant State/Province: ",
+        "name": ["addressState"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "20": {
+        "key": "Registrant Postal Code: ",
+        "name": ["addressZipCode"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "21": {
+        "key": "Registrant Country: ",
+        "name": ["addressCountry"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "22": {
+        "key": "Registrant Phone: ",
+        "name": ["phoneNumber"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "23": {
+        "key": "Registrant Phone Ext: ",
+        "value": [""]
+      },
+      "24": {
+        "key": "Registrant Fax: ",
+        "name": ["faxNumber"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "25": {
+        "key": "Registrant Fax Ext: ",
+        "value": [""]
+      },
+      "26": {
+        "key": "Registrant Email: ",
+        "name": ["email"],
+        "related": "ownerHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "27": {
+        "key": "Registry Admin ID: ",
+        "name": ["adminHandle"],
+        "related": "name"
+      },
+      "28": {
+        "key": "Admin Name: ",
+        "name": ["firstName", "lastName"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "29": {
+        "key": "Admin Organization: ",
+        "name": ["companyName"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "30": {
+        "key": "Admin Street: ",
+        "name": ["addressStreet"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "31": {
+        "key": "Admin City: ",
+        "name": ["addressCity"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "32": {
+        "key": "Admin State/Province: ",
+        "name": ["addressState"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "33": {
+        "key": "Admin Postal Code: ",
+        "name": ["addressZipCode"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "34": {
+        "key": "Admin Country: ",
+        "name": ["addressCountry"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "35": {
+        "key": "Admin Phone: ",
+        "name": ["phoneNumber"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "36": {
+        "key": "Admin Phone Ext: ",
+        "value": [""]
+      },
+      "37": {
+        "key": "Admin Fax: ",
+        "name": ["faxNumber"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "38": {
+        "key": "Admin Fax Ext: ",
+        "value": [""]
+      },
+      "39": {
+        "key": "Admin Email: ",
+        "name": ["email"],
+        "related": "adminHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "40": {
+        "key": "Registry Tech ID: ",
+        "name": ["techHandle"],
+        "related": "name"
+      },
+      "41": {
+        "key": "Tech Name: ",
+        "name": ["firstName", "lastName"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "42": {
+        "key": "Tech Organization: ",
+        "name": ["companyName"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "43": {
+        "key": "Tech Street: ",
+        "name": ["addressStreet"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "44": {
+        "key": "Tech City: ",
+        "name": ["addressCity"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "45": {
+        "key": "Tech State/Province: ",
+        "name": ["addressState"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "46": {
+        "key": "Tech Postal Code: ",
+        "name": ["addressZipCode"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "47": {
+        "key": "Tech Country: ",
+        "name": ["addressCountry"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "48": {
+        "key": "Tech Phone: ",
+        "name": ["phoneNumber"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "49": {
+        "key": "Tech Phone Ext: ",
+        "value": [""]
+      },
+      "50": {
+        "key": "Tech Fax: ",
+        "name": ["faxNumber"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "51": {
+        "key": "Tech Fax Ext: ",
+        "value": [""]
+      },
+      "52": {
+        "key": "Tech Email: ",
+        "name": ["email"],
+        "related": "techHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "53": {
+        "key": "Registry Billing ID: ",
+        "name": ["billingHandle"],
+        "related": "name"
+      },
+      "54": {
+        "key": "Billing Name: ",
+        "name": ["firstName", "lastName"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "55": {
+        "key": "Billing Organization: ",
+        "name": ["companyName"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "56": {
+        "key": "Billing Street: ",
+        "name": ["addressStreet"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "57": {
+        "key": "Billing City: ",
+        "name": ["addressCity"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "58": {
+        "key": "Billing State/Province: ",
+        "name": ["addressState"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "59": {
+        "key": "Billing Postal Code: ",
+        "name": ["addressZipCode"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "60": {
+        "key": "Billing Country: ",
+        "name": ["addressCountry"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "61": {
+        "key": "Billing Phone: ",
+        "name": ["phoneNumber"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "62": {
+        "key": "Billing Phone Ext: ",
+        "value": [""]
+      },
+      "63": {
+        "key": "Billing Fax: ",
+        "name": ["faxNumber"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "64": {
+        "key": "Billing Fax Ext: ",
+        "value": [""]
+      },
+      "65": {
+        "key": "Billing Email: ",
+        "name": ["email"],
+        "related": "billingHandle",
+        "relatedBy": "handle",
+        "relatedTo": "customer"
+      },
+      "66": {
+        "key": "Name Server: ",
+        "name": ["name"],
+        "multiple": true,
+        "related": "nsgroupId",
+        "relatedBy": "nsgroupId",
+        "relatedTo": "nameserver"
+      },
+      "67": {
+        "key": "DNSSEC: ",
+        "name": ["dnssec"],
+        "related": "name"
+      },
+      "68": {
+        "key": "",
+        "name": ["wdprs"],
+        "value": ["URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/"]
+      },
+      "69": {
+        "key": "",
+        "value": ["1"],
+        "name": ["updatedDate"],
+        "format": ">>> Last update of WHOIS database: {date} <<<",
+        "related": "whois",
+        "relatedBy": "id",
+        "relatedTo": "whois"
+      },
+      "70": {
+        "key": "",
+        "value": ["\nFor more information on Whois status codes, please visit https://www.icann.org/epp"]
+      },
+      "71": {
+	"key": "",
+	"value": ["\n; This data is provided by DOMAIN.CAM for information purposes only in\n; accordance with the DOMAIN.CAM Privacy Policy. It is intended to\n; assist persons to obtain information about or related to domain 
+name\n; registration records. DOMAIN.CAM does not guarantee its accuracy.\n; By submitting this query, you agree to abide as follows:\n"]
+	  },
+      "72": {
+        "key": "",
+        "value": ["\n; The data in this registrar whois database is provided to you for\n; information purposes only, and may be used to assist you in obtaining\n; information about or related to domain name registration 
+records.\n; We do not guarantee its accuracy.\n; By submitting a WHOIS query, you agree that you will use this data\n; only for lawful purposes and that, under no circumstances, you will\n; use this data to\n; a) allow, enable, 
+or otherwise support the transmission by e-mail,\n; telephone, or facsimile of mass, unsolicited, commercial advertising\n; or solicitations to entities other than the data recipient's own\n; existing customers; or\n; b) enable 
+high volume, automated, electronic processes that send queries\n; or data to the systems of any Registry Operator or ICANN-Accredited\n; registrar, except as reasonably necessary to register domain names\n; or modify existing 
+registrations.\n; The compilation, repackaging, dissemination or other use of this data\n; is expressly prohibited without prior written consent.\n; These terms may be changed without prior notice. By submitting this\n; query, 
+you agree to abide by this policy.\n\n"]
+      }
+    }
+  }
+]
