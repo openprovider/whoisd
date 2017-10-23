@@ -7,7 +7,7 @@ PROJECT=github.com/openprovider/whoisd
 REGISTRY?=docker.io/openprovider
 
 # Use the 0.0.0 tag for testing, it shouldn't clobber any release builds
-RELEASE?=0.4.7
+RELEASE?=0.5.0
 GOOS?=linux
 GOARCH?=amd64
 
